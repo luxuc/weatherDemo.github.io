@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Vivus</title>
+</head>
+<body>
+  <svg id="my-svg" class="obturateur" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" onclick="obt3.reset().play();">
+    <path d="M10,100A90,90 0,1,1 190,100A90,90 0,1,1 10,100" style="stroke-dasharray: 566, 568; stroke-dashoffset: 0;"></path>
+    <path d="M14.260000000000005,100A85.74,85.74 0,1,1 185.74,100A85.74,85.74 0,1,1 14.260000000000005,100" style="stroke-dasharray: 539, 541; stroke-dashoffset: 0;"></path>
+    <path d="M27.052999999999997,100A72.947,72.947 0,1,1 172.947,100A72.947,72.947 0,1,1 27.052999999999997,100" style="stroke-dasharray: 459, 461; stroke-dashoffset: 0;"></path>
+    <path d="M60.26,100A39.74,39.74 0,1,1 139.74,100A39.74,39.74 0,1,1 60.26,100" style="stroke-dasharray: 250, 252; stroke-dashoffset: 0;"></path>
+    <path d="M34.042,131.189L67.047,77.781" style="stroke-dasharray: 63, 65; stroke-dashoffset: 0;"></path>
+    <path d="M31.306,75.416L92.41,60.987" style="stroke-dasharray: 63, 65; stroke-dashoffset: 0;"></path>
+    <path d="M68.81,34.042L122.219,67.046" style="stroke-dasharray: 63, 65; stroke-dashoffset: 0;"></path>
+    <path d="M124.584,31.305L139.013,92.409" style="stroke-dasharray: 63, 65; stroke-dashoffset: 0;"></path>
+    <path d="M165.957,68.809L132.953,122.219" style="stroke-dasharray: 63, 65; stroke-dashoffset: 0;"></path>
+    <path d="M168.693,124.584L107.59,139.012" style="stroke-dasharray: 63, 65; stroke-dashoffset: 0;"></path>
+    <path d="M131.19,165.957L77.781,132.953" style="stroke-dasharray: 63, 65; stroke-dashoffset: 0;"></path>
+    <path d="M75.417,168.693L60.987,107.59" style="stroke-dasharray: 63, 65; stroke-dashoffset: 0;"></path>
+</svg>
+
+  <script src="https://cdn.jsdelivr.net/vivus/latest/vivus.min.js"></script>
+  <script>
+    new Vivus('my-svg', {duration: 200});
+  </script>
+</body>
+</html>

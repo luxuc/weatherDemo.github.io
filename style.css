@@ -1,0 +1,98 @@
+.logo{
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40%;
+    margin-bottom: 0%;
+}
+
+#start-btn {
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#note {
+    margin-top: 2%;
+}
+
+#tempAndIcon {
+    width: 60%;
+}
+
+#unit {
+    font-size: 30px;
+    margin: 0px;
+}
+
+#weather {
+    /*display: none;*/
+}
+
+#arrow {
+  padding-top: 95%;
+  font-size: 100px;
+  margin-left: 40%;
+}
+
+#illustration {
+  margin-top: 0%;
+  float: right;
+  width: 40%;
+  height: 30%;
+}
+
+#forecast {
+  position: absolute;
+  top:110%;
+  left: 5%;
+  width: 90%;
+  padding-bottom:300px;
+}
+
+#myChart {
+  position: absolute;
+  top: 300%;
+  width: 90%;
+}
+
+#secondHeader {
+  position: fixed;
+  top:100%;
+  left:5%;
+  width:90%;
+}
+
+#suggestion {
+  width: 240px;
+}
+
+.white{
+    color: white;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+p {
+    font-size: 120px;
+    margin-bottom: 0%;
+}
+
+input {
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.tini {
+    height: 60px;
+}
+
+.floating {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

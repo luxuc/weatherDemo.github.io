@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KOOL | Better Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="ui segment">
+        <div class="ui fluid action input">
+            <input id="manual" type="text" list="locations" placeholder="Search for another place ?">
+            <datalist id="locations">
+                <option value="Albany">
+                <option value="Auburn">
+                <option value="Batavia">
+                <option value="Beacon">
+                <option value="Binghamton">
+                <option value="Buffalo">
+                <option value="Canandaigua">
+                <option value="Cohoes">
+                <option value="Corning">
+                <option value="Cortland">
+                <option value="Dunkirk">
+                <option value="Elmira">
+                <option value="Fulton">
+                <option value="Geneva">
+                <option value="Glen Cove">
+                <option value="Glen Falls">
+                <option value="Gloversville">
+                <option value="Hornell">
+                <option value="Hudson">
+                <option value="Ithaca">
+                <option value="Jamestown">
+                <option value="Johnstown">
+                <option value="Kingston">
+                <option value="Lackawanna">
+                <option value="Little Falls">
+                <option value="Lockport">
+                <option value="Long Beach">
+                <option value="Mechanicville">
+                <option value="Middletown">
+                <option value="Mount Vernon">
+                <option value="New Rochelle">
+                <option value="New York">
+                <option value="Newburgh">
+                <option value="Niagara Falls">
+                <option value="North Tonawanda">
+                <option value="Norwich">
+                <option value="Ogdensburg">
+                <option value="Olean">
+                <option value="Oneida">
+                <option value="Oneonta">
+                <option value="Oswego">
+                <option value="Peekskill">
+                <option value="Plattsburgh">
+                <option value="Port Jervis">
+                <option value="Poughkeepsie">
+                <option value="Rensselaer">
+                <option value="Rochester">
+                <option value="Rome">
+                <option value="Rye">
+                <option value="Salamanca">
+                <option value="Saratoga Springs">
+                <option value="Schenectady">
+                <option value="Sherrill">
+                <option value="Syracuse">
+                <option value="Tonawanda">
+                <option value="Troy">
+                <option value="Utica">
+                <option value="Watertown">
+                <option value="Waterbliet">
+                <option value="White Plains">
+                <option value="Yonkers">
+            </datalist>
+            <button class="ui teal icon button" onclick="override()">
+                <i class="search big icon" onclick="override()"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="ui active dimmer" style='font-size:30px;' id="spinner">
+        <div class="ui large text loader">
+            Checking weather for you...One Sec
+        </div>
+    </div>
+
+    <div style="padding:2%">
+
+        <div class="ui right floated segment" id="unit">
+            °C
+            <div class="ui toggle checkbox" >
+                <input id="tempUnit" type="checkbox" onchange="changeUnit()">
+                <label></label>
+            </div>°F
+        </div>
+
+        <div id="weather">
+            <div class="ui huge header">
+                <h1 class="ui large header">
+                    @
+                    <b class="ui large teal header" id="City">Troy</b>
+                </h1>
+                <div id="Major">
+                    <div id="tempAndIcon">
+                        <p><span id="mainTemp">1°C</span>
+                            <img class="ui small right floated image" src="img/GIFicons/13d.gif" />
+                        </p>
+                    </div>
+                    <small class="sub header" style="font-size:40px;">
+                      clear, feels like <span id="feelsTemp">-2°C</span>
+                    </small>
+                </div>
+            </div>
+
+            <div class="ui list" id="min_max" style="font-size:40px">
+                <div class="item">Monday
+                    <div id="maxTemp" class="ui circular yellow massive label">2°C</div>
+                    -
+                    <div id="minTemp" class='ui circular teal massive label'>0°C</div>
+                </div>
+            </div>
+
+            <div id="illustration">
+                <img id="suggestion" class="ui medium image" src="img/illustration/1.png" alt="clothing illustration">
+            </div>
+
+            <div class="ui column centered grid" id="arrow">
+                <i class="angle double up icon"></i>
+            </div>
+
+            <div class="ui grid" id="forecast">
+
+                <div class="ui huge header">
+                    <b class="ui huge teal header" id="City">
+                    Weather Forecast
+                    </b>
+                </div>
+
+                <div class="six column row">
+                    <div class="left floated column"><h1>Monday</h1></div>
+                    <div class="centered column">
+                        <img class="ui tini right floated image" src="img/icons/01d.png" alt="sunny">
+                    </div>
+                    <div class="right floated column">
+                        <div class="ui circular yellow massive label">15</div>
+                        <div class='ui circular teal massive label'>6</div>
+                    </div>
+                </div>
+                <div class="six column row">
+                    <h1 class="left floated column">Tuesday</h1>
+                    <div class="centered column">
+                        <img class="ui tini right floated image" src="img/icons/03d.png" alt="sunny">
+                    </div>
+                    <div class="right floated column">
+                        <div class="ui circular yellow massive label">18</div>
+                        <div class='ui circular teal massive label'>12</div>
+                    </div>
+                </div>
+                <div class="six column row">
+                    <h1 class="left floated column">Wednesday</h1>
+                    <div class="centered column">
+                        <img class="ui tini right floated image" src="img/icons/09d.png" alt="sunny">
+                    </div>
+                    <div class="right floated column">
+                        <div class="ui circular yellow massive label">22</div>
+                        <div class='ui circular teal massive label'>7</div>
+                    </div>
+                </div>
+                <div class="six column row">
+                    <h1 class="left floated column">Thursday</h1>
+                    <div class="centered column">
+                        <img class="ui tini right floated image" src="img/icons/11d.png" alt="sunny">
+                    </div>
+                    <div class="right floated column">
+                        <div class="ui circular yellow massive label">20</div>
+                        <div class='ui circular teal massive label'>10</div>
+                    </div>
+                </div>
+                <div class="six column row">
+                    <h1 class="left floated column">Friday</h1>
+                    <div class="centered column">
+                        <img class="ui tini right floated image" src="img/icons/13d.png" alt="sunny">
+                    </div>
+                    <div class="right floated column">
+                        <div class="ui circular yellow massive label">18</div>
+                        <div class='ui circular teal massive label'>9</div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="myChart"></canvas>
+
+        </div>
+    </div>
+
+    <!-- import zepto -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+    <!-- import chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
